@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-const AdminCompanies = lazy(() => import('./components/amdinPages/adminCompanies.jsx'));
+
 import Loader from './components/Spinner.jsx';
 import { setUser } from './features/authFeatures.js';
 import { userBaseUrl } from './utils/constants.jsx';
@@ -13,6 +13,7 @@ const AdminJobs = lazy(() => import('./components/amdinPages/AdminJobs.jsx'));
 const CreateJobs = lazy(() => import('./components/amdinPages/CreateJobs.jsx'));
 const Applicants = lazy(() => import('./components/amdinPages/Applicants.jsx'));
 const JobDescription = lazy(() => import('./components/JobDescription.jsx'))
+const AdminCompanies=lazy(()=>import("./components/amdinPages/AdminCompanies.jsx"))
 const Browse = lazy(() => import('./components/Browse.jsx'))
 const Jobs = lazy(() => import('./components/Jobs.jsx'))
 const Home = lazy(() => import('./components/Home.jsx'))
