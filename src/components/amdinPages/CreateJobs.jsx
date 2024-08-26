@@ -52,7 +52,7 @@ const CreateJobs = () => {
 
     const { mutate, isLoading } = useMutation(submitHandlerLogic, {
         onSuccess: (data) => {
-            console.log(data);
+            // console.log(data);
             
             toast({
                 isClosable: true,

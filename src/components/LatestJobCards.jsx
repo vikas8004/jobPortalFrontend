@@ -13,10 +13,10 @@ const LatestJobCards = ({ele}) => {
                         <Heading as={"h2"} fontSize={"15px"}>{ele?.companyId?.name&&firstLetterCapital(ele?.companyId?.name)}</Heading>
                         <Text>{ele?.location&&firstLetterCapital(ele?.location)}</Text>
                     </CardHeader>
-                    <CardBody mt={"-25px"}>
+                    <CardBody mt={"-30px"}>
                         <VStack alignItems={"flex-start"}>
-                            <Text>{ele?.title&&firstLetterCapital(ele?.title)}</Text>
-                            <Text>{ele?.description&&firstLetterCapital(ele?.description)}</Text>
+                            <Text fontWeight={"bold"} fontSize={"sm"}>{ele?.title&&firstLetterCapital(ele?.title)}</Text>
+                            <Text noOfLines={3}>{ele?.description&&firstLetterCapital(ele?.description)}</Text>
                         </VStack>
                         <HStack gap={"20px"} mt={"10px"}>
                             <Badge fontWeight={"bold"} fontSize={"10px"} colorScheme='blue'>{ele?.position} positions</Badge>

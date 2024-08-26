@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import AdminCompanies from './components/amdinPages/adminCompanies.jsx';
+const AdminCompanies = lazy(() => import('./components/amdinPages/adminCompanies.jsx'));
 import Loader from './components/Spinner.jsx';
 import { setUser } from './features/authFeatures.js';
 import { userBaseUrl } from './utils/constants.jsx';

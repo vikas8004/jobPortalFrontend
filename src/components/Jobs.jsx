@@ -15,13 +15,13 @@ const Jobs = () => {
             <Navbar />
             <Stack px={["10px", "40px", "70px"]} flexDir={"row"} justifyContent={"space-between"} mt={"40px"} mb={"20px"}>
                 {/* filter cards*/}
-                <Box width={"20%"}>
+                <Box width={"15%"}>
                     <FilterCard />
                 </Box>
                 {/* all job cards */}
                 {
                     !arr.length ? <Text>No jobs found</Text> :
-                        <Box width={"80%"} >
+                        <Box maxW={"85%"} >
                             <Grid gridTemplateColumns={["repeat(1,1fr)", "repeat(1,1fr)", "repeat(2,1fr)", "repeat(3,1fr)"]} gap={"20px"}
 
                             >

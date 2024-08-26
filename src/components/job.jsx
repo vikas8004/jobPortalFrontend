@@ -27,7 +27,7 @@ const Job = ({ele}) => {
                 </HStack>
                 <VStack alignItems={"start"}>
                     <Text fontWeight={"bold"}>{ele?.title&&firstLetterCapital(ele?.title)}</Text>
-                    <Text textAlign={"justify"} noOfLines={"4"} lineHeight={"20px"} fontSize={"medium"} color={"gray.700"}>{ele?.description&&firstLetterCapital(ele?.description)}</Text>
+                    <Text  noOfLines={"4"} lineHeight={"20px"} fontSize={"medium"} color={"gray.700"}>{ele?.description&&firstLetterCapital(ele?.description)}</Text>
                 </VStack>
                 <HStack gap={"20px"} mt={"10px"}>
                     <Badge fontWeight={"bold"} fontSize={"10px"} colorScheme='blue'>{ele?.position} positions</Badge>
@@ -36,7 +36,7 @@ const Job = ({ele}) => {
                 </HStack>
                 <HStack mt={"10px"}>
                     <Button onClick={() => navigate(`/job/description/${ele._id}`)} fontWeight={"bold"} variant={"outline"} fontSize={"small"} >Details</Button>
-                    <Button fontWeight={"bold"} variant={"outline"} bg={"#7209b7"} color={"white"} fontSize={"small"} _hover={{ bg: "black" }}>Save for later</Button>
+                  
                 </HStack>
                 
             </Box>
