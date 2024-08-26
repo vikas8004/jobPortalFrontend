@@ -83,7 +83,7 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${userBaseUrl}/loign/verifylogin`)
+        const res = await axios.get(`${userBaseUrl}/login/verifylogin`)
         if (res) {
 
           // console.log(res.data);
