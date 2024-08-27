@@ -60,7 +60,7 @@ const CreateCompany = () => {
     return (
         <>
             <Navbar />
-            <VStack px={["40px", "70px"]} mt={"30px"} alignItems={"flex-start"} width={"80%"} mx={"auto"}>
+            <VStack px={["20px", "70px"]} mt={"30px"} alignItems={"flex-start"} width={["95%","85%","75%"]} mx={"auto"}>
                 <Box>
                     <Heading as={"h2"} size={'md'}>Your company name</Heading>
                     <Text>Give a name to your. Don't worry you can change it later.</Text>

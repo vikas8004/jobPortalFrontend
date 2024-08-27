@@ -43,7 +43,7 @@ const Applicants = () => {
             {isError && <Text>Something went wrong</Text>}
             {
                 !applicants.length ? <> <Navbar /><Stack px={["10px", "70px"]} mt="20px"> <Text fontWeight={"bold"} fontSize={"sm"}>Applicants ({applicants.length})</Text></Stack></> : <><Navbar />
-                    <Stack px={["10px", "70px"]} mt="20px">
+                    <Stack px={["15px", "70px"]} mt="20px">
                         <Text fontWeight={"bold"} fontSize={"sm"}>Applicants ({applicants.length})</Text>
                         <ApplicantTable />
                     </Stack></>

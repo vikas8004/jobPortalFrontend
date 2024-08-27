@@ -51,7 +51,7 @@ const CompaniesTable = () => {
         <Box
             overflowX="auto"
             mx="auto" // Center the table horizontally
-            width={tableWidth} // Apply responsive width
+            width={"full"} // Apply responsive width
             boxShadow="md" // Add a subtle shadow
             borderRadius="md" // Slightly round the corners
             border="1px solid"

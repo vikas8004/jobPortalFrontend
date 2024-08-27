@@ -7,13 +7,14 @@ import { useDispatch } from 'react-redux';
 import Loader from './components/Spinner.jsx';
 import { setUser } from './features/authFeatures.js';
 import { userBaseUrl } from './utils/constants.jsx';
+import ProtectedRoute from './components/amdinPages/ProtectedRoute.jsx';
 const CreateCompany = lazy(() => import('./components/amdinPages/CreateCompany.jsx'));
 const EditCompnay = lazy(() => import('./components/amdinPages/EditCompnay.jsx'));
 const AdminJobs = lazy(() => import('./components/amdinPages/AdminJobs.jsx'));
 const CreateJobs = lazy(() => import('./components/amdinPages/CreateJobs.jsx'));
 const Applicants = lazy(() => import('./components/amdinPages/Applicants.jsx'));
 const JobDescription = lazy(() => import('./components/JobDescription.jsx'))
-const AdminCompanies=lazy(()=>import("./components/amdinPages/AdminCompanies.jsx"))
+const AdminCompanies = lazy(() => import("./components/amdinPages/AdminCompanies.jsx"))
 const Browse = lazy(() => import('./components/Browse.jsx'))
 const Jobs = lazy(() => import('./components/Jobs.jsx'))
 const Home = lazy(() => import('./components/Home.jsx'))
@@ -53,27 +54,27 @@ const Router = createBrowserRouter([
   // for admin
   {
     path: "/admin/companies",
-    element: <AdminCompanies />
+    element: <ProtectedRoute><AdminCompanies /></ProtectedRoute>
   },
   {
     path: "/admin/companies/create",
-    element: <CreateCompany />
+    element: <ProtectedRoute> <CreateCompany /></ProtectedRoute>
   },
   {
     path: "/admin/companies/:id",
-    element: <EditCompnay />
+    element: <ProtectedRoute> <EditCompnay /></ProtectedRoute>
   },
   {
     path: "/admin/jobs",
-    element: <AdminJobs />
+    element: <ProtectedRoute><AdminJobs /></ProtectedRoute>
   },
   {
     path: "/admin/jobs/create",
-    element: <CreateJobs />
+    element: <ProtectedRoute><CreateJobs /></ProtectedRoute>
   },
   {
     path: "/admin/jobs/:id/applicants",
-    element: <Applicants />
+    element: <ProtectedRoute><Applicants /></ProtectedRoute>
 
   }
 ])

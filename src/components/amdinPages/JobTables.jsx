@@ -1,4 +1,5 @@
 import {
+    Avatar,
     Box,
     Button,
     HStack,
@@ -45,8 +46,8 @@ const AdminJobs = () => {
     // Set responsive width for the table container
     const tableWidth = useBreakpointValue({
         base: '99%', // Mobile and small screens
-        md: '80%',   // Tablets
-        lg: '100%',  // Laptops and larger screens
+        md: '99%',   // Tablets
+        lg: '99%',  // Laptops and larger screens
     });
 
     return (
@@ -78,6 +79,7 @@ const AdminJobs = () => {
                             filteredJobs.map((ele, i) => {
                                 return <Tr key={i}>
                                     <Td p={2} textAlign="center">
+
                                         {ele?.companyId?.name && firstLetterCapital(ele?.companyId?.name)}
                                     </Td>
                                     <Td p={2} textAlign="center">{ele?.title && firstLetterCapital(ele?.title)}</Td>

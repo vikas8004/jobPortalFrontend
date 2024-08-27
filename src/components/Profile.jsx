@@ -32,7 +32,7 @@ const Profile = () => {
         md: '80%',   // Tablets
         lg: '70%',  // Laptops and larger screens
     });
-    console.log(allAppliedJobs);
+    // console.log(allAppliedJobs);
 
     const { isLoading } = useQuery("allAppliedJobs", async () => {
         try {

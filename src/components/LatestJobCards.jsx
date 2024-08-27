@@ -1,13 +1,14 @@
 import { Badge, Heading, HStack, Text, VStack, Card, CardHeader, CardBody } from '@chakra-ui/react'
 import React from 'react'
 import firstLetterCapital from '../utils/makeFirstLetterCapital.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const LatestJobCards = ({ele}) => {
     // console.log(ele);
-    
+    const navigate=useNavigate();
     return (
         <>
-            <VStack alignItems={"flex-start"} mb={"20px"}>
+            <VStack alignItems={"flex-start"} mb={"20px"} onClick={()=>{navigate(`/job/description/${ele._id}`)}} cursor={"pointer"}>
                 <Card variant={"elevated"} boxShadow={"0px 0px 9px 3px gray"}>
                     <CardHeader>
                         <Heading as={"h2"} fontSize={"15px"}>{ele?.companyId?.name&&firstLetterCapital(ele?.companyId?.name)}</Heading>

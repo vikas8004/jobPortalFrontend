@@ -36,8 +36,8 @@ const ApplicantTable = () => {
     const toast = useToast();
     // Set responsive width for the table container
     const tableWidth = useBreakpointValue({
-        base: '99%', // Mobile and small screens
-        md: '80%',   // Tablets
+        base: '100%', // Mobile and small screens
+        md: '100%',   // Tablets
         lg: '100%',  // Laptops and larger screens
     });
 
@@ -83,7 +83,7 @@ const ApplicantTable = () => {
             borderColor="gray.200" // Light border color
             bg="white" // White background
             p={2} // Padding around the table
-            mt={"30px"}
+            mt={"10px"}
         >
             {
                 applicants.length <= 0 ? <Text width={"full"} textAlign={'center'}>No companies found</Text> : <Table variant="simple" size="sm">

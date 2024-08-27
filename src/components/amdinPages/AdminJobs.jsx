@@ -18,7 +18,7 @@ const AdminJobs = () => {
             <Navbar />
             <VStack px={["10px", "70px"]} alignItems={"flex-start"} mt={"20px"} width={"full"}>
                 <HStack justifyContent={"space-between"} width={"full"}>
-                    <Input placeholder='filter jobs' width={"20%"} borderColor={'black'} focusBorderColor='black' onChange={(e) => setInput(e.target.value)} value={input} />
+                    <Input placeholder='filter jobs' width={["40%", "35%", "25%", "20%"]} borderColor={'black'} focusBorderColor='black' onChange={(e) => setInput(e.target.value)} value={input} />
                     <Box>
                         <Button size={"sm"} bgColor={"black"} color={'white'} _hover={{ color: "white", bg: "black" }}
                             px={"4px"} fontWeight={"bold"} onClick={() => navigate("/admin/jobs/create")}>New Job</Button>
