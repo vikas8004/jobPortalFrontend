@@ -1,4 +1,4 @@
-import { Divider, Text, VStack, Radio, RadioGroup, Box } from '@chakra-ui/react';
+import { Divider, Text, VStack, Radio, RadioGroup, Box, HStack, useBreakpointValue, Stack } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 
 const filterData = [
@@ -22,30 +22,39 @@ const FilterCard = ({ applyFilter }) => {
     const handleFilterChange = (filterType, value) => {
         setSelectedFilter(value);
     };
+
     useEffect(() => {
         applyFilter(selectedFilter);
-    }, [selectedFilter])
+    }, [selectedFilter]);
 
+    const textSize = useBreakpointValue({ base: 'sm', md: 'lg' });
+    const spacing = useBreakpointValue({ base: 2, md: 6 });
 
     return (
-        <VStack alignItems={"flex-start"}>
-            <Text textAlign={"left"} width={"full"}>Filter Jobs</Text>
+        <VStack alignItems={"flex-start"} spacing={spacing} width={"full"}>
+            <Text textAlign={"left"} width={"full"} fontSize={textSize}>Filter Jobs</Text>
             <Divider />
             {
                 filterData.map((filter, i) => (
                     <Box key={i} width={"full"}>
-                        <Text fontWeight={"bold"}>{filter.filterType}</Text>
-                        <RadioGroup
-                            value={selectedFilter}
-                            onChange={(value) => { handleFilterChange(filter.filterType, value) }}
-                            colorScheme='red'
+                        <Text fontWeight={"bold"} fontSize={textSize} mb={2}>{filter.filterType}</Text>
+                        <HStack
+                            spacing={4}
+                            wrap={"wrap"}
+                            justifyContent={"flex-start"}
                         >
-                            {filter.array.map((option, j) => (
-                                <Box key={j}>
-                                    <Radio value={option}>{option}</Radio>
-                                </Box>
-                            ))}
-                        </RadioGroup>
+                            <RadioGroup
+                                value={selectedFilter}
+                                onChange={(value) => { handleFilterChange(filter.filterType, value) }}
+                                colorScheme='red'
+                            >
+                                {filter.array.map((option, j) => (
+                                    <Box key={j}>
+                                        <Radio value={option}>{option}</Radio>
+                                    </Box>
+                                ))}
+                            </RadioGroup>
+                        </HStack>
                     </Box>
                 ))
             }

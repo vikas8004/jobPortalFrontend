@@ -23,7 +23,7 @@ const Jobs = () => {
                 job.salary.toLowerCase() === selectedFilter.toLowerCase()
             );
         });
-        console.log(filtered);
+        
         
         setFilJobs(filtered);
     };
@@ -35,15 +35,15 @@ const Jobs = () => {
     return (
         <>
             <Navbar />
-            <Stack px={["10px", "40px", "70px"]} flexDir={"row"} justifyContent={"space-between"} mt={"40px"} mb={"20px"}>
+            <Stack flexDirection={["column","column","row","row"]} px={["10px", "40px", "70px"]} flexDir={"row"} justifyContent={"space-between"} mt={"40px"} mb={"20px"} gap={"20px"}>
                 {/* filter cards*/}
-                <Box width={"15%"}>
+                <Box width={["95%","90%","20%","15%"]}>
                     <FilterCard applyFilter={applyFilter} />
                 </Box>
                 {/* all job cards */}
                 {
                     !filJobs.length ? <Text>No jobs found</Text> :
-                        <Box maxW={"85%"} >
+                        <Box width={["95%","90%","85","85%"]} >
                             <Grid gridTemplateColumns={["repeat(1,1fr)", "repeat(1,1fr)", "repeat(2,1fr)", "repeat(3,1fr)"]} gap={"20px"}
 
                             >

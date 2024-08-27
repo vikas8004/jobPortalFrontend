@@ -67,7 +67,7 @@ const Navbar = () => {
             height={"40px"} zIndex={99}>
             <Box><Text fontSize={"larger"} fontWeight={"bolder"}>Job<Box as='span' color={"#F83002"}>Portal</Box></Text></Box>
 
-            <Button bgColor={"#6a38c2"} _hover={{ bg: '#6a38c2' }} onClick={onOpen} display={["block", "block", "none", "none"]}><CiMenuFries fontWeight={"bolder"} fontSize={"20px"} /></Button>
+            <Button bgColor={"#f83002"} _hover={{ bg: '#f83002' }} onClick={onOpen} display={["block", "block", "none", "none"]}><CiMenuFries fontWeight={"bolder"} fontSize={"20px"} /></Button>
             <Drawer
                 isOpen={isOpen}
                 placement='right'
